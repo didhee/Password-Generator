@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password-Generator</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="/app.js"></script>
+</head>
+<body>
+    <section id="container">
+        <div class="card">
+            <h1 class="title">Generate a <br><span class="accent-text">random password</span></h1>
+            <p class="subtitle">Never use an insecure password again.</p>
+
+            <div class="controls">
+                <div>
+                    <label for="password-length">Length: (4-15)</label>
+                    <div class="length-control">
+                        <button id="decrement">-</button>
+                        <input type="number" name="passwod-length" id="password-length" min="4" max="15" inputmode="numeric">
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+
+                <button id="generate-btn"><img class="btn-icon" src="./image/Icon.png" alt="icon">Generate Passwords</button>
+            </div>
+
+            <div class="passwords">
+                <ul class="password-list">
+                    <li><button class="password hidden">...</button></li>
+                    <li><button class="password hidden">...</button></li>
+                    <li><button class="password hidden">...</button></li>
+                    <li><button class="password hidden">...</button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div id="pop-up">Password copied to clipboard</div>
+</body>
+</html>
