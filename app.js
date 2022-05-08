@@ -29,7 +29,7 @@ function inputSteps(event) {
         lengthInput.stepDown();
     }
 
-    if (event.target.id === "incremrnt") {
+    if (event.target.id === "increment") {
         lengthInput.stepUp();
     }
 
@@ -58,7 +58,7 @@ function copyUsingExecCommand(text) {
     input.style = {
         position: "absolute",
         left: "-9999px"
-    }
+    };
     document.body.append(input);
     input.select();
     document.execCommand("copy");
@@ -71,19 +71,19 @@ function copyUsingExecCommand(text) {
 \*---------------------------------------*/
 
 function generatePassword() {
-    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lowercase = "abcdefghijklmnopqrstuvwxyz";
-    const numbers = "1234567890";
+    const uppercase = "QWERTYUIOPASDFGHJKLZXCVBNM";
+    const lowercase = "mnbvcxzasdfghjklpoiuytrewq";
+    const numbers = "0192837465";
     const specialCharacters = "~`@#$^&()_|[].,?:";
     const mathSymbols = "/-+=*%!";
 
-    let characters = uppercase + lowercase + numbers + specialCharacters + mathSymbols;
-    characters = characters.split('');
+    let passwordCharacters = uppercase + lowercase + numbers + specialCharacters + mathSymbols;
+    passwordCharacters = passwordCharacters.split('');
 
     let password = '';
     for (let i = 0; i < passwordLength; i++) {
-        let randomIndex = Math.floor(Math.random() * characters.length);
-        password += characters[randomIndex];
+        let randomIndex = Math.floor(Math.random() * passwordCharacters.length);
+        password += passwordCharacters[randomIndex];
     }
 
     return password;
