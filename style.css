@@ -105,6 +105,10 @@ button:hover, button:active {
     color: #1c1c1c;
 }
 
+#password-length:focus {
+    background-color: #ffffff;
+}
+
 .length-control input:focus {
     background-color: #0000001a;
 }
